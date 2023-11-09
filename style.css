@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+h1,
+h2 {
+    font-weight: 800;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    display: block;
+    background: #808000;
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 25px;
+    animation: líbio 5s ease-in-out;
+    animation-timeline: wiew();
+    animation-range: cover 0 cover 40%;
+}
+
+section.modulo p {
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1.3em;
+}
+
+section.modulo h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    letter-spacing: .5em;
+    text-align: center;
+}
+
+section.modulo.content {
+    padding: 40px 0;
+    background-color: #DEB887;
+}
+
+section.modulo.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.modulo.parallax h1 {
+    color: #FFA07A;
+    text-shadow: 7px 7px 7px rgb(63, 63, 63);
+    text-align: center;
+    font-size: 75px;
+    z-index: 100;
+}
+
+section.modulo.parallax::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 30%, #000000 100%);
+}
+
+section.modulo.parallax-1 {
+    background-image: url("https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&q=80&w=1484&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+section.modulo.parallax-2 {
+    background-image: url("https://cdn.pixabay.com/photo/2020/10/12/15/55/coffee-5649213_1280.jpg");
+}
+
+section.modulo.parallax-3 {
+    background-image: url("https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+@keyframes líbio {
+    from {
+        translate: -100vw 0;
+        color: #ff0000;
+        opacity: 0;
+    }
+
+    to {
+        translate: 0 0;
+        color: blueviolet;
+        opacity: 1;
+    }
+}
+
+@media all and (max-width: 860px) {
+    section.modulo.parallax h1 {
+        color: #ebb631;
+        text-shadow: 5px 5px 7px rgb(63, 63, 63);
+        text-align: center;
+        font-size: 2.5em;
+        z-index: 100;
+    }
+
+    section.modulo p {
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    section.modulo.content {
+        width: 90%;
+    }
+
+    section.modulo h2{
+        margin-bottom: 10px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    section.modulo.parallax-1 {
+        background-image: url("https://cdn.pixabay.com/photo/2015/07/10/14/04/coffee-839233_1280.jpg");
+    }
+
+    section.modulo.parallax-2 {
+        background-image: url("https://cdn.pixabay.com/photo/2017/08/10/06/58/cup-2619216_1280.jpg");
+    }
+}
+
+footer{
+    position: absolute;
+    bottom: -15%;
+    margin-left: 30%;
+    font-size: 20px;
+    margin-top: 100%;
+}
